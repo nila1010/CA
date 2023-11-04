@@ -1,0 +1,106 @@
+---
+import MenuIcon from './MenuIcon.astro'
+---
+
+<nav>
+	<img class="logo1" src="/logoweb.svg" alt="CA karrierepartner og studievejleder" />
+	<img class="logo2" src="/favicon.svg" alt="CA karrierepartner og studievejleder" />
+	<div class="navright">
+		<img class="search" src="/search.svg" alt="Search" />
+		<div class="menu">
+			<h1>MENU</h1>
+			<MenuIcon />
+			<h1>EN</h1>
+		</div>
+		<h1 class="border">Bliv medlem</h1>
+		<h1>Anbefal nyt medlem</h1>
+		<div class="ca">
+			<h1>Mit CA</h1>
+			<img class="login" src="/login.svg" alt="login logo" />
+		</div>
+	</div>
+</nav>
+
+<style>
+	nav {
+		display: flex;
+		height: 80px;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	div {
+		height: 100%;
+	}
+
+	.search {
+		width: 40px;
+		margin-right: 20px;
+	}
+
+	.login {
+		width: 50px;
+	}
+
+	.menu {
+		display: flex;
+		align-items: center;
+	}
+
+	.menu h1 {
+		padding: 0 20px;
+	}
+	.navright {
+		display: flex;
+
+		align-items: center;
+	}
+
+	.border {
+		border: 0px;
+		border-left: solid #4a4a4a;
+		border-right: solid #4a4a4a;
+	}
+
+	.logo1 {
+		width: 25%;
+		margin-left: 2rem;
+		margin-top: 1.5rem;
+	}
+
+	.logo2 {
+		display: none;
+	}
+
+	a {
+		width: fit-content;
+	}
+
+	h1 {
+		font-size: 18px;
+		color: #4a4a4a;
+		padding: 10px 10px 10px 30px;
+		min-width: fit-content;
+	}
+	.ca {
+		display: flex;
+		background-color: var(--brandcolor);
+		align-items: center;
+		padding-right: 40px;
+	}
+	.ca h1 {
+		color: white;
+	}
+
+	@media (max-width: 1220px) {
+		.logo1 {
+			display: none;
+		}
+
+		.logo2 {
+			display: block;
+			margin-left: 2rem;
+			width: 6%;
+		}
+	}
+</style>

@@ -1,0 +1,25 @@
+---
+import '../styles/mainstyle.css'
+import Navigation from '../components/Navigation.astro'
+---
+
+<!doctype html>
+<html lang="da">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="robots" content="noindex" />
+		<title>
+			CA A-kasse - Karrierepartner & studievejledning - Your Career Our Business - Din ambition
+			vores rådgivning
+		</title>
+	</head>
+	<body>
+		<header><Navigation /></header>
+		<main>
+			<slot />
+		</main>
+		<footer></footer>
+	</body>
+</html>

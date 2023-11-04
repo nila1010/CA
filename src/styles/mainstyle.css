@@ -1,0 +1,24 @@
+:root {
+	--backgroundcolor: #e6e6dd;
+	--brandcolor: #054674;
+	--fillcolornav: #4a4a4a;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--backgroundcolor);
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+h1 {
+	font-family: 'Nexa-Light', sans-serif;
+}
