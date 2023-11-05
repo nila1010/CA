@@ -1,0 +1,59 @@
+<section>
+	<div class="overlay"></div>
+	<article>
+		<div class="textholder">
+			<slot />
+		</div>
+	</article>
+</section>
+
+<style>
+	section {
+		display: grid;
+		grid-template-columns: 160px 1fr;
+	}
+
+	.textholder {
+		padding: 50px;
+		background-color: var(--brandcolor2);
+		border-bottom-right-radius: 100px;
+		max-width: 500px;
+		min-height: 400px;
+	}
+
+	article {
+		position: relative;
+		background-image: url(/klovnheader.webp);
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-left: 130px;
+		background-color: #f1f1ed;
+		border-top-left-radius: 100px;
+		height: 500px;
+	}
+
+	.overlay {
+	}
+
+	@media (max-width: 1000px) {
+		section {
+			grid-template-columns: 1fr;
+		}
+
+		article {
+			border-radius: 0;
+		}
+
+		.overlay {
+			position: absolute;
+			background-color: rgba(5, 70, 116, 0.5);
+			width: 100%;
+			height: 500px;
+			z-index: 1;
+		}
+
+		.textholder {
+			background-color: transparent;
+		}
+	}
+</style>

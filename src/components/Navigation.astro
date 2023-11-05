@@ -13,7 +13,7 @@ import MenuIcon from './MenuIcon.astro'
 			<h1>EN</h1>
 		</div>
 		<h1 class="border">Bliv medlem</h1>
-		<h1>Anbefal nyt medlem</h1>
+		<h1 class="nytmedlem">Anbefal nyt medlem</h1>
 		<div class="ca">
 			<h1>Mit CA</h1>
 			<img class="login" src="/login.svg" alt="login logo" />
@@ -34,12 +34,8 @@ import MenuIcon from './MenuIcon.astro'
 	}
 
 	.search {
-		width: 40px;
-		margin-right: 20px;
-	}
-
-	.login {
-		width: 50px;
+		width: 30px;
+		margin-right: 5px;
 	}
 
 	.menu {
@@ -101,6 +97,32 @@ import MenuIcon from './MenuIcon.astro'
 			display: block;
 			margin-left: 2rem;
 			width: 6%;
+		}
+	}
+
+	@media (max-width: 950px) {
+		.nytmedlem,
+		.border {
+			display: none;
+		}
+	}
+
+	@media (max-width: 500px) {
+		.login,
+		.search {
+			display: none;
+		}
+
+		.ca {
+			padding: 0 10px 0 0;
+		}
+
+		.ca h1 {
+			padding: 10px 10px 10px 20px;
+		}
+
+		.logo2 {
+			width: 15%;
 		}
 	}
 </style>
