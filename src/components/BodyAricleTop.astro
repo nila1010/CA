@@ -1,5 +1,5 @@
 <section>
-	<div class="overlay"></div>
+	<div></div>
 	<article>
 		<div class="textholder">
 			<slot />
@@ -46,8 +46,7 @@
 			padding: 20px 0 0 20px;
 		}
 
-		.overlay {
-			display: none;
+		div {
 			position: absolute;
 			background-color: rgba(5, 70, 116, 0.5);
 			width: 100%;
@@ -61,6 +60,9 @@
 	}
 
 	@media (max-width: 600px) {
+		div {
+			height: 450px;
+		}
 		article {
 			padding: 10px;
 			height: 450px;
