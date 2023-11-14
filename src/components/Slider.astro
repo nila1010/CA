@@ -1,0 +1,83 @@
+---
+
+---
+
+<section class="billeder">
+	<img class="arrowleft arrow" src="/arrow.svg" alt="slide left" />
+	<img class="arrowright arrow" src="/arrow.svg" alt="slide right" />
+	<article class="container">
+		<img class="slide" src="/karriererodgiver2.webp" alt="karriere rådgivning" />
+		<img class="slide" src="/karriererodgiver3.webp" alt="karriere rådgivning" />
+		<img class="slide" src="/karriererodgiver4.webp" alt="karriere rådgivning" />
+		<img class="slide" src="/karriererodgiver.webp" alt="karriere rådgivning" />
+	</article>
+</section>
+
+<style>
+	section {
+		position: relative;
+		display: flex;
+		justify-content: center;
+	}
+
+	article {
+		display: flex;
+		gap: 10px;
+	}
+	img {
+		max-width: 24.5%;
+	}
+
+	.arrow {
+		display: none;
+	}
+
+	@media (max-width: 600px) {
+		article {
+			aspect-ratio: 1/1;
+			width: 80%;
+			overflow: hidden;
+			scroll-behavior: smooth;
+			gap: 0;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		.arrow {
+			position: absolute;
+			display: block;
+			width: 10%;
+		}
+
+		.arrowleft {
+			top: 41%;
+			left: 3%;
+		}
+		.arrowright {
+			transform: rotate(180deg);
+			top: 41%;
+			right: 3%;
+		}
+	}
+</style>
+
+<script>
+	const container = document.querySelector('.container')
+	const slide = document.querySelector('.slide')
+
+	const next = document.querySelector('.arrowright')
+	const prev = document.querySelector('.arrowleft')
+
+	next.addEventListener('click', () => {
+		console.log('click')
+		const slideWidth = slide.clientWidth
+		container.scrollLeft += slideWidth
+	})
+
+	prev.addEventListener('click', () => {
+		const slideWidth = slide.clientWidth
+		container.scrollLeft -= slideWidth
+	})
+</script>

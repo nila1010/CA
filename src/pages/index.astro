@@ -3,6 +3,7 @@ import MainLayout from '../mainlayout/MainLayout.astro'
 import BodyAricleTop from '../components/BodyAricleTop.astro'
 import BodyArticleMiddle from '../components/BodyArticleMiddle.astro'
 import BodyArticleButtom from '../components/BodyArticleButtom.astro'
+import Slider from '../components/Slider.astro'
 import Button from '../components/Button.astro'
 ---
 
@@ -15,20 +16,12 @@ import Button from '../components/Button.astro'
 			du kan fokusere på det vigtigste – din uddannelse.
 		</p>
 		<div>
-			<Button style="blue" text="Studie partner" />
+			<Button style="blueborder" text="Studie partner" />
 			<Button style="white" text="Meld mig ind" />
 		</div>
 	</BodyAricleTop>
 	<BodyArticleMiddle>
-		<article class="billeder">
-			<img src="/karriererodgiver2.webp" alt="karriere rådgivning" /><img
-				src="/karriererodgiver3.webp"
-				alt="karriere rådgivning"
-			/><img src="/karriererodgiver4.webp" alt="karriere rådgivning" /><img
-				src="/karriererodgiver.webp"
-				alt="karriere rådgivning"
-			/>
-		</article>
+		<Slider />
 		<article class="text">
 			<div>
 				<h2>Vi støtter dig på din rejse og kun dine ambitioner sætter grænserne!</h2>
@@ -63,10 +56,6 @@ import Button from '../components/Button.astro'
 		color: white;
 	}
 
-	.billeder img {
-		max-width: 24.5%;
-	}
-
 	h2 {
 		max-width: 25ch;
 	}
@@ -76,10 +65,6 @@ import Button from '../components/Button.astro'
 		display: flex;
 		gap: 60px;
 		justify-content: center;
-	}
-	.billeder {
-		display: flex;
-		gap: 10px;
 	}
 
 	.textmidt {
@@ -96,10 +81,12 @@ import Button from '../components/Button.astro'
 	.buttomarticle {
 		display: flex;
 		width: 100%;
+		gap: 20px;
 		justify-content: space-between;
 	}
 
 	.buttomarticle img {
+		aspect-ratio: 1/1;
 		max-width: 40%;
 	}
 
@@ -118,7 +105,7 @@ import Button from '../components/Button.astro'
 	}
 	@media (max-width: 1375px) {
 		.buttomarticle img {
-			max-width: 30%;
+			max-width: 40%;
 		}
 	}
 	@media (max-width: 1135px) {
@@ -136,7 +123,7 @@ import Button from '../components/Button.astro'
 			align-items: center;
 		}
 		.buttomarticle img {
-			max-width: 50%;
+			max-width: 60%;
 		}
 		.buttomarticle {
 			flex-direction: column;
@@ -148,7 +135,9 @@ import Button from '../components/Button.astro'
 		}
 	}
 
-	@media (max-width: 1000px) {
-		/*Slider*/
+	@media (max-width: 650px) {
+		.buttomarticle img {
+			max-width: 80%;
+		}
 	}
 </style>
