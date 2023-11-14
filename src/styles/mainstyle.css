@@ -6,6 +6,29 @@
 	--fillcolornav: #4a4a4a;
 }
 
+@font-face {
+	font-family: 'Nexabold';
+	src: url('/fonts/Nexa Bold.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Nexaheavy';
+	src: url('/fonts/Nexa Heavy.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Nexalight';
+	src: url('/fonts/Nexa Light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -29,5 +52,27 @@ img {
 }
 
 h1 {
-	font-family: 'Nexa-Light', sans-serif;
+	font-family: 'Nexaheavy', sans-serif;
+	font-size: 45px;
+	color: white;
+	line-height: 55px;
+}
+
+h2 {
+	font-family: 'Nexabold', sans-serif;
+	font-size: 36px;
+	color: #4a4a4a;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #4a4a4a;
+}
+
+a {
+	font-family: 'Nexabold', sans-serif;
+	font-size: 21px;
+	color: white;
 }

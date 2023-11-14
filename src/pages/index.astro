@@ -1,12 +1,112 @@
 ---
-import BodyAricleTop from '../components/BodyAricleTop.astro'
 import MainLayout from '../mainlayout/MainLayout.astro'
+import BodyAricleTop from '../components/BodyAricleTop.astro'
+import BodyArticleMiddle from '../components/BodyArticleMiddle.astro'
+import Button from '../components/Button.astro'
 ---
 
 <MainLayout>
 	<BodyAricleTop>
-		<h1>Her står der tekst</h1>
+		<h1>Start din uddannelse med en stærk partner ved din side!</h1>
+		<p class="headerp">
+			Som medlem hos os får du adgang til en verden af karrieremuligheder, eksklusive events og
+			solid faglig støtte. Men det stopper ikke her! Vi vil gerne hjælpe dig med at spare penge, så
+			du kan fokusere på det vigtigste – din uddannelse.
+		</p>
+		<div>
+			<Button style="blue" text="Studie partner" />
+			<Button style="white" text="Meld mig ind" />
+		</div>
 	</BodyAricleTop>
+	<BodyArticleMiddle>
+		<article class="billeder">
+			<img src="/karriererodgiver2.webp" alt="karriere rådgivning" /><img
+				src="/karriererodgiver3.webp"
+				alt="karriere rådgivning"
+			/><img src="/karriererodgiver4.webp" alt="karriere rådgivning" /><img
+				src="/karriererodgiver.webp"
+				alt="karriere rådgivning"
+			/>
+		</article>
+		<article class="text">
+			<div>
+				<h2>Vi støtter dig på din rejse og kun dine ambitioner sætter grænserne!</h2>
+				<p class="textmidt">
+					Vi er stolte af at præsentere to af vores fantastiske medlemmer, der har gået fra at være
+					studerende til at dominere businessverdenen. Deres historier er en kilde til inspiration
+					for os alle!
+				</p>
+			</div>
+			<div class="knappermidt">
+				<Button style="blue" text="Karriere partner" />
+				<Button style="white" text="Meld mig ind" />
+			</div>
+		</article>
+	</BodyArticleMiddle>
 </MainLayout>
 
-<style></style>
+<style>
+	div {
+		margin-top: 20px;
+	}
+
+	.headerp {
+		color: white;
+	}
+
+	img {
+		width: 24.5%;
+	}
+
+	h2 {
+		margin-top: 20px;
+		max-width: 25ch;
+	}
+
+	.text {
+		display: flex;
+		gap: 60px;
+		justify-content: center;
+	}
+	.billeder {
+		display: flex;
+		gap: 10px;
+	}
+
+	.textmidt {
+		margin-top: 20px;
+		max-width: 65ch;
+	}
+
+	.knappermidt {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+	}
+
+	@media (max-width: 1375px) {
+		.knappermidt {
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+	@media (max-width: 1135px) {
+		.text {
+			flex-direction: column;
+			gap: 30px;
+		}
+		.knappermidt {
+			flex-direction: row;
+			justify-content: flex-start;
+		}
+		@media (max-width: 1000px) {
+			.text {
+				align-items: center;
+			}
+		}
+
+		@media (max-width: 1000px) {
+			/*Slider*/
+		}
+	}
+</style>
