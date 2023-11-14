@@ -69,10 +69,26 @@ p {
 	font-weight: 300;
 	font-size: 18px;
 	color: #4a4a4a;
+	max-width: 65ch;
 }
 
 a {
 	font-family: 'Nexabold', sans-serif;
 	font-size: 21px;
 	color: white;
+}
+
+@media (max-width: 1000px) {
+	h1 {
+		font-size: 35px;
+	}
+	h2 {
+		font-size: 30px;
+	}
+}
+
+@media (max-width: 600px) {
+	h1 {
+		font-size: 30px;
+	}
 }

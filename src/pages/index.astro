@@ -2,6 +2,7 @@
 import MainLayout from '../mainlayout/MainLayout.astro'
 import BodyAricleTop from '../components/BodyAricleTop.astro'
 import BodyArticleMiddle from '../components/BodyArticleMiddle.astro'
+import BodyArticleButtom from '../components/BodyArticleButtom.astro'
 import Button from '../components/Button.astro'
 ---
 
@@ -43,27 +44,35 @@ import Button from '../components/Button.astro'
 			</div>
 		</article>
 	</BodyArticleMiddle>
+	<BodyArticleButtom>
+		<article class="buttomarticle">
+			<img src="/studieboger.webp" alt="Studiebøger" />
+			<div class="textbuttom">
+				<h2>Glem ikke den ekstra bonus: En fordelagtig rabat på studiebøger!</h2>
+				<p>
+					Når du tilmelder dig, får du ikke bare et medlemskab, du får nøglen til en verden af
+					muligheder!
+				</p>
+				<Button style="blue" text="Meld mig ind" />
+			</div>
+		</article>
+	</BodyArticleButtom>
 </MainLayout>
-
 <style>
-	div {
-		margin-top: 20px;
-	}
-
 	.headerp {
 		color: white;
 	}
 
-	img {
-		width: 24.5%;
+	.billeder img {
+		max-width: 24.5%;
 	}
 
 	h2 {
-		margin-top: 20px;
 		max-width: 25ch;
 	}
 
 	.text {
+		margin-top: 60px;
 		display: flex;
 		gap: 60px;
 		justify-content: center;
@@ -84,10 +93,32 @@ import Button from '../components/Button.astro'
 		align-items: center;
 	}
 
+	.buttomarticle {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	.buttomarticle img {
+		max-width: 40%;
+	}
+
+	.textbuttom {
+		display: flex;
+		margin-top: 60px;
+		gap: 25px;
+		flex-direction: column;
+		justify-content: center;
+	}
 	@media (max-width: 1375px) {
 		.knappermidt {
 			flex-direction: column;
 			justify-content: center;
+		}
+	}
+	@media (max-width: 1375px) {
+		.buttomarticle img {
+			max-width: 30%;
 		}
 	}
 	@media (max-width: 1135px) {
@@ -99,14 +130,25 @@ import Button from '../components/Button.astro'
 			flex-direction: row;
 			justify-content: flex-start;
 		}
-		@media (max-width: 1000px) {
-			.text {
-				align-items: center;
-			}
+	}
+	@media (max-width: 1000px) {
+		.text {
+			align-items: center;
+		}
+		.buttomarticle img {
+			max-width: 50%;
+		}
+		.buttomarticle {
+			flex-direction: column;
+			align-items: center;
 		}
 
-		@media (max-width: 1000px) {
-			/*Slider*/
+		.textbuttom {
+			align-items: center;
 		}
+	}
+
+	@media (max-width: 1000px) {
+		/*Slider*/
 	}
 </style>
