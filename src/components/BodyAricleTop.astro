@@ -42,9 +42,12 @@
 
 		article {
 			border-radius: 0;
+			height: 500px;
+			padding: 20px 0 0 20px;
 		}
 
 		.overlay {
+			display: none;
 			position: absolute;
 			background-color: rgba(5, 70, 116, 0.5);
 			width: 100%;
@@ -54,6 +57,21 @@
 
 		.textholder {
 			background-color: transparent;
+		}
+	}
+
+	@media (max-width: 600px) {
+		article {
+			padding: 10px;
+			height: 450px;
+		}
+
+		.overlay {
+			height: 450px;
+		}
+		.textholder {
+			gap: 20px;
+			padding: 20px;
 		}
 	}
 </style>

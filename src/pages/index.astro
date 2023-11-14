@@ -15,7 +15,7 @@ import Button from '../components/Button.astro'
 			solid faglig støtte. Men det stopper ikke her! Vi vil gerne hjælpe dig med at spare penge, så
 			du kan fokusere på det vigtigste – din uddannelse.
 		</p>
-		<div>
+		<div class="buttonstop">
 			<Button style="blueborder" text="Studie partner" />
 			<Button style="white" text="Meld mig ind" />
 		</div>
@@ -136,6 +136,12 @@ import Button from '../components/Button.astro'
 	}
 
 	@media (max-width: 650px) {
+		h1 {
+			line-height: 40px;
+		}
+		.buttonstop {
+			margin-top: 30px;
+		}
 		.buttomarticle img {
 			max-width: 80%;
 		}
